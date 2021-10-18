@@ -1,3 +1,5 @@
+
+//skills slider
 var slideshows = document.querySelectorAll('[data-component="slideshow"] .slide');
 
 var slidetime = 2000;
@@ -23,3 +25,14 @@ function initSlideShow(){
 }
 initSlideShow();
 setInterval(()=>{initSlideShow();},slideshows.length*slidetime);
+
+//up arrow functionality
+const scrollUp = document.querySelector('#scroll-up');
+
+scrollUp.addEventListener("click",()=>{
+    window.scrollTo({
+        top:0,
+        left:0,
+        behavior:"smooth",
+    });
+});
